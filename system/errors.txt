@@ -1,0 +1,5 @@
+ERRORS
+"stderr" and all information about program's fialture is here.
+
+
+<Втр Ноя 19 15:37:11 MSK 2013> error example. 
