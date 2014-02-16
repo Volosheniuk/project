@@ -1891,20 +1891,20 @@ void changebykva(char *s,double x, char *q){
 void sergey(vector_t ** a,char *s,int maxlen,int countvector){
         int i=0;
         int j=0;
-        int bykva=65;
-        FILE* failik;
-	char q[1000];
+        int bykva=65;//название векторов а б с .....
+        FILE* failik;//файлик--- куда ведем запись сторк для бизона
+	char q[1000];//копия
 	int fignia;
-	char *myq=&q[0];
+	char *myq=&q[0];//коп2
 	
-	sprintf(myq,"%s",s);
-    double znachenie;
-    for (j=0;j<maxlen;j++){ //новое вычисление
+        double znachenie;
+    for (j=0;j<maxlen;j++){ //новое вычисление а1 б1 в1 ..... а2 б2 с2 ...
         failik=fopen("inp.txt","w+");
+	sprintf(myq,"%s",s);//копируем строку в которой нужно заменить каждый вектор на значение
+	bykva=65;
         for (i=0;i<countvector;i++){//kolichestvo simvolov kotorie stoit zamenit
                 char aaaa[1] = {bykva};
-		
-                znachenie=a[i]->vals[j];
+		znachenie=a[i]->vals[j];
                 changebykva(myq,znachenie,&aaaa[0]);
                 bykva++;
         }
